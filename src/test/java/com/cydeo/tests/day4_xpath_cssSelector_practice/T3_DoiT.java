@@ -23,16 +23,17 @@ public class T3_DoiT {
 
 
 //        3. Click on Button 1
-        WebElement Button1 = driver.findElement(By.xpath("//button[@class='btn btn-primary']"));
+        WebElement Button1 = driver.findElement(By.xpath("//button[@onclick=\"button1()\"]"));
         driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
         Button1.click();
 
-
+             // driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+            //Button1.submit();
 
 //        4. Verify text displayed is as expected:
         String expected ="Clicked on button one!";
-WebElement message = driver.findElement(By.xpath("//p[@id='result']"));
-     String actual = message.getText();
+        WebElement message = driver.findElement(By.xpath("//p[@id='result']"));
+        String actual = message.getText();
         System.out.println(actual);
 
 if (actual.equals(expected)){
