@@ -14,6 +14,16 @@ import java.util.concurrent.TimeUnit;
 public class DropdownPractices {
    public WebDriver driver;
 
+    @BeforeMethod
+    public void setupMethod (){
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get("http://practice.cydeo.com/dropdown");
+
+    }
+
+
 
 
 @Test
@@ -63,14 +73,9 @@ String actualOptionText = stateDropdown.getFirstSelectedOption().getText();
 //    Select year using  : visible text
 //    Select month using   : value attribute
 //    Select day using : index number
-    @BeforeMethod
-    public void setupMethod (){
-        driver = WebDriverFactory.getDriver("chrome");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://practice.cydeo.com/dropdown");
 
-    }
+
+
 
 @Test
     public void dropdown_task6 (){
@@ -113,7 +118,7 @@ dayDropdown.selectByIndex(0);
 }
 
 @AfterMethod
-    public void closeTest (){
+    public void tearDown  (){
     driver.close();
 }
 
