@@ -4,6 +4,7 @@ import com.cydeo.utilites.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -82,7 +83,10 @@ public void window_handling_test ()  {
 
 
 
-
+@AfterMethod
+    public void tearDown (){
+        driver.close();
+}
 
 
 
