@@ -29,7 +29,7 @@ public class T1_StaleElementRefEX {
         driver.get("https://practice.cydeo.com/add_remove_elements/");
 
 //        3. Click to “Add Element” button
-
+// button[@onclick='AddElement()']
         WebElement addElementBtn = driver.findElement(By.xpath("//button[.='Add Element']"));
 Thread.sleep(2000);
 addElementBtn.click();
