@@ -1,4 +1,4 @@
-package com.cydeo.tests.day02_02_2022;
+package com.cydeo.tests.day02_02_12_2022;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
