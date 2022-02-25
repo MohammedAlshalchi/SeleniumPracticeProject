@@ -9,4 +9,6 @@ C #2: Confirmation alert practice
 4. Click to OK button from the alert
 5. Verify “You clicked: Ok” text is displayed
  */
+
+    // ASYA solve it
 }

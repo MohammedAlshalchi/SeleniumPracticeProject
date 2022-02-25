@@ -10,4 +10,7 @@ public class TC3 {
 5. Click to OK button from the alert
 6. Verify “You entered:  hello” text is displayed.
      */
+
+
+    //ASYA solve it
 }
