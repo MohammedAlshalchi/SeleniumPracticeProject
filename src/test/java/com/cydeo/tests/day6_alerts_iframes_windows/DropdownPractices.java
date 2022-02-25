@@ -29,12 +29,7 @@ public class DropdownPractices {
 @Test
         public void dropdown_task5() throws InterruptedException {
 //    TC #5: Selecting state from State dropdown and verifying result
-//1. Open Chrome browser
-//2. Go to http://practice.cydeo.com/dropdown
-    driver = WebDriverFactory.getDriver("chrome");
-driver.manage().window().maximize();
-driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-driver.get("http://practice.cydeo.com/dropdown");
+
 
 
 //we located the dropdown and it is ready to use
@@ -65,7 +60,7 @@ String actualOptionText = stateDropdown.getFirstSelectedOption().getText();
 }
 
 
-    //
+
 //    TC #6: Selecting date on dropdown and verifying
 //1. Open Chrome browser
 //2. Go to https://practice.cydeo.com/dropdown
@@ -104,6 +99,7 @@ dayDropdown.selectByIndex(0);
     //getting actual values from browser
 
     String actualYear = yearDropdown.getFirstSelectedOption().getText();
+    // we can not store webElement in String
     String actualMonth = monthDropdown.getFirstSelectedOption().getText();
     String actualDay = dayDropdown.getFirstSelectedOption().getText();
 
