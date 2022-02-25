@@ -36,7 +36,7 @@ driver.get("http://practice.cydeo.com/javascript_alerts");
 @Test
     public void alert_test1 (){
 
-//            3. Click to “Click for JS Alert” button
+// 3. Click to “Click for JS Alert” button
 
     WebElement informationAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Alert']"));
 informationAlertButton.click();
