@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class T5_Windoes_Practice {
@@ -59,7 +60,12 @@ String actualTitle = driver.getTitle();
 
 
 //6. Switch to new Window.
-    for (String each: driver.getWindowHandles() ) {
+    //Set<String> allWindowHandles = driver.getWindowHandles();===> we can use now but mainly we use it if we have
+    // more than 2 windows
+    // window handle 1 - main window
+    // window handle 2 - 2nd window
+
+    for (String each: driver.getWindowHandles() ) {// will bring all opened windows
 
        driver.switchTo().window(each) ;
         System.out.println("Current title while switching windows: "+driver.getTitle());
@@ -73,11 +79,15 @@ String actualTitle = driver.getTitle();
 
   Assert.assertEquals(actualTitle,expectedTitleAfterClick);
     System.out.println("Title after click: " + actualTitle);
+
+
+    //If we want to go back to main page, we can use already stored main handle
+    //driver.switchTo().window(mainHandle);
 }
 
 //@AfterMethod
 //    public void tearDown (){
-//        driver.quit();
+//        driver.quit(); /// we use quit NOT close because we have more than one window
 //}
 
 
