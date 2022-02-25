@@ -46,6 +46,7 @@ WebDriver driver;
         //option #2- passing index number of iframe
         //driver.switchTo().frame(0); ===>count start from 1 ( when we have 1 from 1 means :1-1=0 )
         //option #3- locate as web element and pass in frame() method
+        // to check Is thee is iframe or not we can write iframe in the search bar
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']")));
 
     //Locate the p tag
