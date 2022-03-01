@@ -27,7 +27,7 @@ WebDriver driver;
 //    TC #4: Iframe practice
      //1. Create a new class called: T4_Iframes
     //2. Create new test and make set ups
-    driver = WebDriverFactory.getDriver("chrome");
+    driver =WebDriverFactory.getDriver("chrome");
     driver.manage().window().maximize();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     driver.get("https://practice.cydeo.com/iframe");

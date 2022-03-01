@@ -1,5 +1,6 @@
 package com.cydeo.tests.day6_alerts_iframes_windows;
 
+
 import com.cydeo.utilites.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,7 +28,7 @@ public class T5_Windoes_Practice {
 //1. Create a new class called: T5_WindowsPractice
 //2. Create new test and make set ups
 //3. Go to : https://practice.cydeo.com/windows
-        driver = WebDriverFactory.getDriver("chrome");
+            driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://practice.cydeo.com/windows");
