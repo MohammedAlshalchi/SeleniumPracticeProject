@@ -23,8 +23,8 @@ public class T4_Config_Practice {
 
 
         //We are getting the browerType dynamically from our configuration.properties file
-String browserType = ConfigurationReader.getProperty("browser");
-        driver = WebDriverFactory.getDriver("browserType");
+        String browserType = ConfigurationReader.getProperty("browser");
+        driver = WebDriverFactory.getDriver(browserType);
 
 
 
@@ -38,16 +38,18 @@ String browserType = ConfigurationReader.getProperty("browser");
     public void google_search_test(){
 
         //3- Write “apple” in search box
-        WebElement googleSearchBoox = driver.findElement(By.xpath("//input[@name='q']"));
-       googleSearchBoox.sendKeys("apple" + Keys.ENTER);
+        WebElement googleSearchBox = driver.findElement(By.xpath("//input[@name='q']"));
+
+        googleSearchBox.sendKeys(ConfigurationReader.getProperty("searchValue") + Keys.ENTER);
+
 
         //4- Verify title:
         //Expected: apple - Google Search
-
-        String expectedTitle = "apple - Google Search";
+        String expectedTitle = ConfigurationReader.getProperty("searchValue")+" - Google Search";
         String actualTitle = driver.getTitle();
 
         Assert.assertEquals(actualTitle, expectedTitle);
+    }
 
     }
 
@@ -63,4 +65,4 @@ String browserType = ConfigurationReader.getProperty("browser");
 
 
 
-}
+

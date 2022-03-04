@@ -1,5 +1,6 @@
 package com.cydeo.tests.day7_webtables_utilties;
 
+import com.cydeo.tests.base.TestBase;
 import com.cydeo.utilites.BrowserUtils;
 import com.cydeo.utilites.CRM_Utilities;
 import com.cydeo.utilites.WebDriverFactory;
@@ -11,20 +12,10 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class T3_CRM_LOGIN {
+public class T3_CRM_LOGIN extends TestBase {
 
 
-public WebDriver driver;
 
-
-  @BeforeMethod
-  public void setupMethod (){
-      //1. Create new test and make set ups
-      driver = WebDriverFactory.getDriver("chrome");
-      driver.manage().window().maximize();
-      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-  }
 
 
 
@@ -93,7 +84,7 @@ driver.get("https://login1.nextbasecrm.com/");
 
 //6. Verify title is as expected:
     //Expected: Portal
-BrowserUtils.verifyTitle(driver,"(2) Portal");
+BrowserUtils.verifyTitle(driver,"Portal");
 
 }
 
