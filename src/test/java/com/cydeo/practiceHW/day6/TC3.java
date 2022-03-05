@@ -12,5 +12,5 @@ public class TC3 {
      */
 
 
-    //ASYA solve it
+    //Ayson solve it
 }
