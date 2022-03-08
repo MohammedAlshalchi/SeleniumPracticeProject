@@ -102,16 +102,16 @@ calculateButton.click();
         nameBox.sendKeys("Mohammed Alshalchi");
 
         WebElement streetBox = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_fmwOrder_TextBox2']"));
-        streetBox.sendKeys("1213 Irwindale Dr");
+        streetBox.sendKeys("3191 hour glass dr");
 
         WebElement cityBox = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_fmwOrder_TextBox3']"));
-        cityBox.sendKeys("San Francisco");
+        cityBox.sendKeys("Dumfries");
 
         WebElement stateBox = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_fmwOrder_TextBox4']"));
-        stateBox.sendKeys("CA");
+        stateBox.sendKeys("VA");
 
         WebElement zipcodeBox = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_fmwOrder_TextBox5']"));
-        zipcodeBox.sendKeys("94006");
+        zipcodeBox.sendKeys("22026");
 
         //10.Click on “visa” radio button
         WebElement visaRadioButton = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_fmwOrder_cardList_0']"));
@@ -119,7 +119,7 @@ calculateButton.click();
 
         //11.Generate card number using JavaFaker
         WebElement cardNumberBox = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_fmwOrder_TextBox6']"));
-        String cardNumber = "4400556615162237";
+        String cardNumber = "2258996734165566";
         cardNumberBox.sendKeys(cardNumber);
         for (int i = 0; i < cardNumber.length(); i++) {
             char eachCh = cardNumber.charAt(i);
@@ -129,7 +129,7 @@ calculateButton.click();
         }
 
         WebElement expireDateBox = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_fmwOrder_TextBox1']"));
-        expireDateBox.sendKeys("10/2028");
+        expireDateBox.sendKeys("06/1978");
 
         //12.Click on “Process”
         WebElement processButton = driver.findElement(By.xpath("//div//a[@id='ctl00_MainContent_fmwOrder_InsertButton']"));
