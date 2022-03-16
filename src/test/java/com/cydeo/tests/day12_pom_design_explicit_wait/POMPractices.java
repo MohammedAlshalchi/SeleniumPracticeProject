@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 public class POMPractices {
 
 LibraryLoginage libraryLoginage;
+
 @BeforeMethod
 public void setupMethod (){
     Driver.getDriver().get("https://library1.cydeo.com/");
@@ -48,6 +49,7 @@ public void setupMethod (){
         Assert.assertTrue(libraryLoginage.enterValidEmailErrorMessage.isDisplayed());
 //        NOTE: FOLLOW POM DESIGN PATTERN
         Driver.getDriver().quit();
+
     }
 
 
