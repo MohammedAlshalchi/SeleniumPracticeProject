@@ -1,5 +1,6 @@
 package com.cydeo.tests.day11_actions_jseexcutor_practice;
 
+import com.cydeo.utilites.BrowserUtils;
 import com.cydeo.utilites.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -23,23 +24,24 @@ public class T1_Circle_Drag_N_Drop {
        Driver.getDriver().get("https://demos.telerik.com/kendo-ui/dragdrop/index");
 
         //Locate "Accept Cookies" button and click
-        WebElement acceptCookiesButton = Driver.getDriver().findElement(By.id("onetrust-accept-btn-handler"));
-        acceptCookiesButton.click();
-
+       WebElement acceptCookiesButton = Driver.getDriver().findElement(By.id("onetrust-accept-btn-handler"));
+       acceptCookiesButton.click();
+        BrowserUtils.sleep(5);
         //Locate small and big circles to be able to drag them around
         WebElement smallCircle = Driver.getDriver().findElement(By.id("draggable"));
         WebElement bigCircle = Driver.getDriver().findElement(By.id("droptarget"));
 
         //2. Drag and drop the small circle to bigger circle.
         Actions actions = new Actions(Driver.getDriver());
-        //actions.dragAndDrop(smallCircle, bigCircle).perform();
+     // actions.dragAndDrop(smallCircle, bigCircle).perform();
         actions.clickAndHold(smallCircle)
                 .pause(2000)
                 .moveToElement(bigCircle)
                 .pause(2000)
                 .release()
+                .pause(2000)
                 .perform();
-
+      // System.out.println(bigCircle.getText());
         //3. Assert:
         //-Text in big circle changed to: “You did great!”
 
